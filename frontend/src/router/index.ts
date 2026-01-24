@@ -5,7 +5,7 @@ import UserLayout from '@/layouts/UserLayout.vue'
 
 // Auth Pages
 import Login from '@/views/auth-views/Login.vue'
-import Signup from '@/views/auth-views/Signup.vue'
+import Signup from '@/views/auth-views/SignUp.vue'
 import ResetPass from '@/views/auth-views/ResetPass.vue'
 
 // Admin Pages
@@ -13,7 +13,7 @@ import ResetPass from '@/views/auth-views/ResetPass.vue'
 // User Pages
 import HomeView from '@/views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
-import Practice from '@/views/Practice.vue'
+import Practice from '@/views/practice/Practice.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,6 +50,19 @@ const router = createRouter({
     //   component: () => import('../views/AboutView.vue'),
     // },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    }
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  }
 })
 
 export default router

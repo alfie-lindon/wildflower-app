@@ -20,14 +20,14 @@ A full-stack ecommerce platform built with **Laravel**, **Vue**, and **Tailwind 
 - Manage categories
 - Upload product images
 - Order management & status updates
-- User management (if enabled)
+- User management
 
 ### ⚙️ Tech Stack
 - **Backend:** Laravel (REST API)
 - **Frontend:** Vue 3 + Vite
 - **Styling:** Tailwind CSS v4
-- **Database:** MySQL / MariaDB / PostgreSQL (your choice)
-- **Authentication:** Laravel Breeze / Sanctum (whichever you’re using)
+- **Database:** MySQL
+- **Authentication:** Sanctum
 - **Storage:** Local or S3-compatible driver
 - **Deployment:** Any Linux server or Laravel Forge-ready
 
